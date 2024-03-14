@@ -11,7 +11,8 @@ WHERE kingdom = 'Plantae' GROUP BY scientific_name, family ORDER BY gbif_records
 
 -- Class: Aves (GBIF records and species richness)
 
-
+SELECT scientific AS scientific_name, family, COUNT(DISTINCT id) AS gbif_records FROM gbif_shanghai
+WHERE class = 'Aves' GROUP BY scientific_name, family ORDER BY gbif_records DESC;
 
 
 
